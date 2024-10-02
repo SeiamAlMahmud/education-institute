@@ -8,8 +8,8 @@ export function CarouselCustomArrows() {
   return (
     <Carousel
       className="rounded-xl w-[90%]  mx-auto"
-      loop='true'
-      autoplay='true'
+      loop={true}
+      autoplay={true}
       prevArrow={({ handlePrev }) => (
         <IconButton
           variant="text"

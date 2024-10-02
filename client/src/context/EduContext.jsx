@@ -6,8 +6,9 @@ export const useEduContext = ()=> {
     return useContext(eduContextProvider)
 }
 const EduContext = ({children}) => {
+  const content = {}
   return (
-    <eduContextProvider.Provider>
+    <eduContextProvider.Provider value={content}>
         {children}
     </eduContextProvider.Provider>
   )

@@ -11,6 +11,7 @@ export default function BlogsView() {
 
   useEffect(() => {
     AOS.init({
+      offset: 50,
       duration: 300,
       easing: 'ease-in-sine',
       delay: 100,
@@ -18,7 +19,7 @@ export default function BlogsView() {
   }, []); // Empty dependency array ensures AOS is initialized only once when the component mounts
   return (
     <>
-    <div className='flex flex-col xl:flex-row justify-center items-start my-5 gap-6 mx-auto px-4'>
+    <div className='flex flex-col xl:flex-row justify-center items-start my-5 gap-6 mx-auto px-2'>
         <div>
             <h2 className='text-left my-3 text-xl font-bold border-b-2 border-b-pink-400 w-52 hover:w-72 transition-all mb-5'>News</h2>
         <div className='flex-wrap flex mx-auto gap-6 justify-center xl:flex-nowrap' data-aos="fade-up">

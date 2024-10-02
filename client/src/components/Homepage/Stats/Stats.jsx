@@ -10,7 +10,7 @@ import { PiStudentThin } from "react-icons/pi";
 const Stats = () => {
     return (
       <>
-      <div className='px-5'>
+      <div className='px-5 mb-14'>
       <div className='my-7 mt-20'>
         <h1 className='text-center border-b-4 border-b-yellow-600 w-full md:w-[80%] pb-4 mx-auto text-2xl md:text-3xl font-bold'>Institute in Numbers</h1> 
       </div>
