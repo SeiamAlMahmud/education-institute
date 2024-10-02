@@ -65,7 +65,7 @@ import {
                          
                 <ListItemSuffix>
                 <Button variant="gradient" size="sm">
-            Sign In
+            See More...
           </Button>
                 </ListItemSuffix>
         
