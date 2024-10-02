@@ -8,7 +8,9 @@ const Homepage = () => {
     <div className='max-w-screen-xl mx-auto mt-4'>
         <CarouselCustomArrows />
     </div>
+    <div className='max-w-screen-2xl'>
         <BlogsView />
+    </div>
     </>
   )
 }
