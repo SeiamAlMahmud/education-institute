@@ -18,7 +18,7 @@ const NoticeCard = ({ title = 'Hello file', date}) => {
         <ListItem ripple={false} className="py-2 pr-1 pl-4 w-full flex justify-between items-center">
           <div className="flex flex-col flex-1 gap-1">
             <p className="font-semibold text-gray-800">{title}</p> {/* Title */}
-            <p className="text-gray-500">{formattedDate}</p> {/* Date */}
+            <p className="text-gray-500 text-sm sm:text-lg">{formattedDate}</p> {/* Date */}
           </div>
           <ListItemSuffix>
             <IconButton variant="text" color="red">
