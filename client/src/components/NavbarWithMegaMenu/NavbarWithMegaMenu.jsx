@@ -81,15 +81,15 @@ const navListMenuItems = [
   },
 ];
  
-function NavListMenu() {
+function NavListMenu({ closeNav }) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+
   const renderItems = navListMenuItems.map(
     ({ icon, title, description, path }, key) => (
-      <Link to={path || '/'} key={key}>
-        <MenuItem className="flex items-center gap-3 rounded-lg">
+      <Link to={path || '/'} key={key} onClick={closeNav}>
+        <MenuItem className="flex items-center gap-3 rounded-lg cursor-pointer">
           <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
-            {" "}
             {React.createElement(icon, {
               strokeWidth: 2,
               className: "h-6 text-gray-900 w-6",
@@ -114,7 +114,7 @@ function NavListMenu() {
       </Link>
     ),
   );
- 
+
   return (
     <React.Fragment>
       <Menu
@@ -160,7 +160,7 @@ function NavListMenu() {
   );
 }
  
-function NavList() {
+function NavList({ closeNav }) {
   return (
     <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
       <Typography
@@ -168,19 +168,21 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-        <Link to={'/notice'}>
-        <ListItem className="flex items-center gap-2 py-2 pr-4"> Notice </ListItem></Link>
+        <Link to={'/notice'} onClick={closeNav}>
+          <ListItem className="flex items-center gap-2 py-2 pr-4"> Notice </ListItem>
+        </Link>
       </Typography>
-      <NavListMenu />
+      <NavListMenu closeNav={closeNav} />
       <Typography
         variant="small"
         color="blue-gray"
         className="font-medium"
       >
-        <Link to={'/contact'}>
-        <ListItem className="flex items-center gap-2 py-2 pr-4">
-          Contact Us
-        </ListItem></Link>
+        <Link to={'/contact'} onClick={closeNav}>
+          <ListItem className="flex items-center gap-2 py-2 pr-4">
+            Contact Us
+          </ListItem>
+        </Link>
       </Typography>
     </List>
   );
@@ -195,7 +197,10 @@ export function NavbarWithMegaMenu() {
       () => window.innerWidth >= 960 && setOpenNav(false),
     );
   }, []);
- 
+
+  // Function to close the navbar
+  const closeNav = () => setOpenNav(false);
+
   return (
     <Navbar className="mx-auto max-w-screen-xl px-4 py-2">
       <div className="flex items-center justify-between text-blue-gray-900">
@@ -203,21 +208,13 @@ export function NavbarWithMegaMenu() {
           variant="h6"
           className="mr-4 cursor-pointer py-1.5 lg:ml-2"
         >
-          <Link to={'/'}>
-          Oxford
+          <Link to={'/'} onClick={closeNav}>
+            Oxford
           </Link>
         </Typography>
         <div className="hidden lg:block">
-          <NavList />
+          <NavList closeNav={closeNav} />
         </div>
-        {/* <div className="hidden gap-2 lg:flex">
-          <Button variant="text" size="sm" color="blue-gray">
-            Log In
-          </Button>
-          <Button variant="gradient" size="sm">
-            Sign In
-          </Button>
-        </div> */}
         <IconButton
           variant="text"
           color="blue-gray"
@@ -232,15 +229,7 @@ export function NavbarWithMegaMenu() {
         </IconButton>
       </div>
       <Collapse open={openNav}>
-        <NavList />
-        {/* <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
-            Log In
-          </Button>
-          <Button variant="gradient" size="sm" fullWidth>
-            Sign In
-          </Button>
-        </div> */}
+        <NavList closeNav={closeNav} />
       </Collapse>
     </Navbar>
   );
