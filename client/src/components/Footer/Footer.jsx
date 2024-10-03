@@ -7,7 +7,7 @@ import logo from "../../assets/react.svg"
 const Footer = () => {
     return (
       <>
-      <div className='flex flex-col max-w-screen-2xl mx-auto gap-10'>
+      <div className='flex flex-col max-w-screen-2xl mx-auto gap-10 mt-14'>
         <div className='ml-10'>
       <img src={logo} height={100} width={100} alt="" />
         </div>

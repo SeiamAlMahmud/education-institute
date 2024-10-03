@@ -7,6 +7,7 @@ import {
     Button,
   } from "@material-tailwind/react";
   import { FaFilePdf } from "react-icons/fa";
+import { Link } from "react-router-dom";
    
   function TrashIcon() {
     return (
@@ -64,9 +65,11 @@ import {
           }
                          
                 <ListItemSuffix>
+                  <Link to={'/notice'}>
                 <Button variant="gradient" size="sm">
             See More...
           </Button>
+                  </Link>
                 </ListItemSuffix>
         
         </List>

@@ -5,6 +5,8 @@ import Stats from '../components/Homepage/Stats/Stats'
 import StatsChart from '../components/Homepage/StatsChart/StatsChart'
 import UpcommingNews from '../components/Homepage/UpcommingNews/UpcommingNews'
 import Card from '../components/Homepage/Card/Card'
+import CountdownTimer from '../components/Homepage/CountDownTimer/CountdownTimer'
+
 
 const Homepage = () => {
   
@@ -25,6 +27,7 @@ const Homepage = () => {
         <StatsChart />
         <Card/>
         <UpcommingNews />
+        <CountdownTimer />
     </div>
     
     </>
