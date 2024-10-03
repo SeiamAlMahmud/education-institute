@@ -165,7 +165,8 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4"><Link to={'/'}> Home</Link> </ListItem>
+        <Link to={'/notice'}>
+        <ListItem className="flex items-center gap-2 py-2 pr-4"> Notice </ListItem></Link>
       </Typography>
       <NavListMenu />
       <Typography
@@ -173,9 +174,10 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
+        <Link to={'/contact'}>
         <ListItem className="flex items-center gap-2 py-2 pr-4">
-        <Link to={'/contact'}>  Contact Us</Link>
-        </ListItem>
+          Contact Us
+        </ListItem></Link>
       </Typography>
     </List>
   );
@@ -195,12 +197,12 @@ export function NavbarWithMegaMenu() {
     <Navbar className="mx-auto max-w-screen-xl px-4 py-2">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
-          as="a"
-          href="#"
           variant="h6"
           className="mr-4 cursor-pointer py-1.5 lg:ml-2"
         >
+          <Link to={'/'}>
           Oxford
+          </Link>
         </Typography>
         <div className="hidden lg:block">
           <NavList />
