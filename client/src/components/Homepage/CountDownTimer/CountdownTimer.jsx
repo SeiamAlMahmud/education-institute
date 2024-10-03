@@ -46,7 +46,7 @@ const CountdownTimer = () => {
   }, [openDate, closeDate, isAdmissionOpen]);
 
   return (
-    <div className="relative flex justify-center items-center h-screen bg-gray-100 overflow-hidden">
+    <div className="relative flex justify-center items-center h-52 bg-gray-100 overflow-hidden">
       {/* Scholar's head watermark */}
       <div 
         className="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-10" 
