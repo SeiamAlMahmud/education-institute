@@ -13,7 +13,7 @@ const Pagination = () => {
 
     // second pagination
     const [currentPage, setCurrentPage] = useState(1);
-    const totalPages = 5;
+    const totalPages = 3;
 
     const handlePrevious = () => {
         if (currentPage > 1) {
@@ -39,7 +39,7 @@ const Pagination = () => {
                 <button
                     key={i}
                     onClick={() => handlePageClick(i)}
-                    className={`mx-1 px-3 py-1 rounded-full  text-gray-700 hover:bg-gray-300 transition-all duration-300 transform hover:scale-105  ${
+                    className={`mx-1 px-3 py-1 rounded-full  text-gray-700 hover:bg-teal-300 transition-all duration-300 transform hover:scale-105  ${
                         currentPage === i ? "bg-blue-500 text-white shadow-lg" : "bg-gray-200"
                     }`}
                 >
@@ -56,7 +56,7 @@ const Pagination = () => {
             <button
                 onClick={handlePrevious}
                 disabled={currentPage === 1}
-                className={`px-4 py-1 rounded-full bg-gray-200 text-gray-700 hover:bg-[#3B9DF8] hover:text-[#fff] transition-all duration-300 ${
+                className={`px-4 py-1 rounded-full bg-gray-200 text-gray-700 hover:bg-[#3B9DF8] hover:text-[#fff] transition-all duration-300 text-sm sm:text-lg ${
                     currentPage === 1 ? "opacity-50 cursor-not-allowed" : ""
                 }`}
             >
@@ -68,7 +68,7 @@ const Pagination = () => {
             <button
                 onClick={handleNext}
                 disabled={currentPage === totalPages}
-                className={`px-4 py-1 rounded-full bg-gray-200 text-gray-700 hover:bg-[#3B9DF8] hover:text-[#fff] transition-all duration-300 ${
+                className={`px-4 py-1 rounded-full bg-gray-200 text-gray-700 hover:bg-[#3B9DF8] hover:text-[#fff] transition-all duration-300 text-sm sm:text-lg ${
                     currentPage === totalPages ? "opacity-50 cursor-not-allowed" : ""
                 }`}
             >
