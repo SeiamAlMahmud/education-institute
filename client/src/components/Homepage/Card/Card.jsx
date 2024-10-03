@@ -9,7 +9,7 @@ const Card = () => {
         <div className="min-w-[90%] md:min-w-[60%] max-w-[80%] sm:max-w-[60%] min-h-[15rem] h-auto mx-auto relative bg-red-50 bg-opacity-40 shadow-md rounded-xl flex sm:flex-row flex-col justify-center items-center gap-[20px] p-4 shadow-bro-200 mt-32">
             
                 <img
-                    src="https://img.freepik.com/free-photo/close-up-portrait-handsome-young-hipster-man-hazel-eyes-wearing-trendy-plaid-shirt-posing-near-city-cafe_291049-1495.jpg?t=st=1722616951~exp=1722620551~hmac=88c27af52ea53d69a3f15a046cd8f7fe8c8036a5c733e1e1449b78bc68aeef24&w=360"
+                    src="https://randomimg.almahmud.top/boy"
                     alt="image"
                     className="w-[130px]  h-[130px] object-cover rounded-full absolute top-[-4rem]"
                 />

@@ -11,6 +11,7 @@ import EduContext from './context/EduContext.jsx';
 import Root from './Foundation/Root.jsx';
 import ErrorPage from './Foundation/ErrorPage.jsx';
 import Homepage from './pages/Homepage.jsx';
+import ContactForm from './pages/ContactForm.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
         index: true,
         element: <Homepage />,
       },
+      {
+        path: '/contact',
+        element: <ContactForm />
+      }
     ],
   },
 ]);
