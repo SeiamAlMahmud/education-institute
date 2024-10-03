@@ -14,6 +14,8 @@ import Homepage from './pages/Homepage.jsx';
 import ContactForm from './pages/ContactForm.jsx';
 import Notice from './pages/Notice.jsx';
 import Gallary from './pages/Gallary.jsx';
+import DashboardRoot from './Foundation/DashboardRoot.jsx';
+import DashBoard from './pages/DashBoard.jsx';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,17 @@ const router = createBrowserRouter([
       {
         path: '/gallary',
         element: <Gallary />
+      }
+    ],
+  },
+  {
+    path: "/adashboard",
+    element: <DashboardRoot />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+        element: <DashBoard />,
       }
     ],
   },
