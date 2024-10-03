@@ -32,31 +32,34 @@ import { Link } from "react-router-dom";
  
 const navListMenuItems = [
   {
-    title: "Products",
-    description: "Find the perfect solution for your needs.",
+    title: "Facultry",
+    description: "Find the perfect Facultry for your needs.",
     icon: SquaresPlusIcon,
   },
   {
+    path: '/about',
     title: "About Us",
     description: "Meet and learn about our dedication",
     icon: UserGroupIcon,
   },
   {
-    title: "Blog",
+    title: "Events",
     description: "Find the perfect solution for your needs.",
     icon: Bars4Icon,
   },
   {
-    title: "Services",
+    title: "Teachers",
     description: "Learn how we can help you achieve your goals.",
     icon: SunIcon,
   },
   {
-    title: "Support",
+    path: '/gallary',
+    title: "Gallary",
     description: "Reach out to us for assistance or inquiries",
     icon: GlobeAmericasIcon,
   },
   {
+    path: '/contact',
     title: "Contact",
     description: "Find the perfect solution for your needs.",
     icon: PhoneIcon,
@@ -67,8 +70,8 @@ const navListMenuItems = [
     icon: NewspaperIcon,
   },
   {
-    title: "Products",
-    description: "Find the perfect solution for your needs.",
+    title: "Staffs",
+    description: "Our staffs serve themselfe.",
     icon: RectangleGroupIcon,
   },
   {
@@ -82,8 +85,8 @@ function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const renderItems = navListMenuItems.map(
-    ({ icon, title, description }, key) => (
-      <a href="#" key={key}>
+    ({ icon, title, description, path }, key) => (
+      <Link to={path || '/'} key={key}>
         <MenuItem className="flex items-center gap-3 rounded-lg">
           <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
             {" "}
@@ -108,7 +111,7 @@ function NavListMenu() {
             </Typography>
           </div>
         </MenuItem>
-      </a>
+      </Link>
     ),
   );
  
@@ -207,14 +210,14 @@ export function NavbarWithMegaMenu() {
         <div className="hidden lg:block">
           <NavList />
         </div>
-        <div className="hidden gap-2 lg:flex">
+        {/* <div className="hidden gap-2 lg:flex">
           <Button variant="text" size="sm" color="blue-gray">
             Log In
           </Button>
           <Button variant="gradient" size="sm">
             Sign In
           </Button>
-        </div>
+        </div> */}
         <IconButton
           variant="text"
           color="blue-gray"
@@ -230,14 +233,14 @@ export function NavbarWithMegaMenu() {
       </div>
       <Collapse open={openNav}>
         <NavList />
-        <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
+        {/* <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
           <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
             Log In
           </Button>
           <Button variant="gradient" size="sm" fullWidth>
             Sign In
           </Button>
-        </div>
+        </div> */}
       </Collapse>
     </Navbar>
   );

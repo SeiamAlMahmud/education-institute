@@ -13,6 +13,7 @@ import ErrorPage from './Foundation/ErrorPage.jsx';
 import Homepage from './pages/Homepage.jsx';
 import ContactForm from './pages/ContactForm.jsx';
 import Notice from './pages/Notice.jsx';
+import Gallary from './pages/Gallary.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: '/notice',
         element: <Notice />
+      },
+      {
+        path: '/gallary',
+        element: <Gallary />
       }
     ],
   },
